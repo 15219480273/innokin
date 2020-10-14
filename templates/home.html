@@ -11,74 +11,88 @@
 {% endblock %}
 
 {% block content %}
-    <div class="flex py-16" id="hero">
-        <div class="col-1/2 relative">
-            <img src="{% static 'images/Banner.png' %}" alt="Innokin Spectre banner" />
-        </div><!-- .col-1/2 -->
-
-        <div class="col-1/2 flex justify-center items-center">
-            <div class="banner-content shadow-2xl p-12">
-                <div class="text-center">
-                    <img class="block mx-auto" src="{% static 'images/banner-title.png' %}" alt="" />
-                    <h2 class="text-5xl font-bold uppercase">Design Content</h2>
+    <div class="banner">
+        <div class="flex hero" id="hero">
+            <div class="col-1/2 relative banner-left">
+                <!-- <img src="{% static 'images/Banner.png' %}" alt="Innokin Spectre banner" /> -->
+                <div class="banner-btn">
+                    <a class="banner-ico-active">
+                        <div class="panel-switch">
+                            <img class="banner-ico" src="{% static 'images/ico-btn.png' %}" alt="">
+                            <img src="{% static 'images/get.png' %}" alt="">
+                        </div>
+                    </a>
+                    <a>
+                        <div class="panel-switch">
+                            <img class="banner-ico" src="{% static 'images/ico-btn.png' %}" alt="">
+                            <img src="{% static 'images/view.png' %}" alt="">
+                        </div>
+                    </a>
                 </div>
+            </div><!-- .col-1/2 -->
 
-                <div class="w-5/6 px-2 mx-auto">
-                    <p class="uppercase font-semibold flex relative mt-6 mb-2">
-                        <img class="banner-text-decoration" src="{% static 'images/Icon.svg' %}" alt="" aria-hidden="true">
-                        Duration
-                    </p>
+            <div class="col-1/2 flex justify-center items-center banner-right">
+                <div class="banner-content shadow-2xl p-12">
+                    <div class="text-center">
+                        <img class="block mx-auto" src="{% static 'images/banner-title.png' %}" alt="" />
+                        <h2 class="text-5xl font-bold uppercase">Design Content</h2>
+                    </div>
 
-                    <p>Oct XX to Oct XX, 2020</p>
+                    <div class="w-5/6 px-2 mx-auto">
+                        <p class="uppercase font-semibold flex relative mt-6 mb-2">
+                            <img class="banner-text-decoration" src="{% static 'images/Icon.svg' %}" alt="" aria-hidden="true">
+                            Duration
+                        </p>
 
-                    <p class="uppercase font-semibold flex relative mt-6 mb-2">
-                        <img class="banner-text-decoration" src="{% static 'images/Icon.svg' %}" alt="" aria-hidden="true">
-                        Prizes
-                    </p>
+                        <p>Oct XX to Oct XX, 2020</p>
 
-                    <p>Best Design - iPad 2020, Fully Customized Sceptre * 2</p>
-                    <p>Best Creativity - OSMO Pocket, Fully Customized Sceptre * 2</p>
-                    <p>Most Popular - XGIMI MoGo Projector, Fully Customized Sceptre * 2</p>
-                    <p>Consolation Prize * 20 - 1 Customized Sceptre printed with the designer's name</p>
+                        <p class="uppercase font-semibold flex relative mt-6 mb-2">
+                            <img class="banner-text-decoration" src="{% static 'images/Icon.svg' %}" alt="" aria-hidden="true">
+                            Prizes
+                        </p>
+
+                        <p>Best Design - iPad 2020, Fully Customized Sceptre * 2</p>
+                        <p>Best Creativity - OSMO Pocket, Fully Customized Sceptre * 2</p>
+                        <p>Most Popular - XGIMI MoGo Projector, Fully Customized Sceptre * 2</p>
+                        <p>Consolation Prize * 20 - 1 Customized Sceptre printed with the designer's name</p>
 
 
-                    <p class="uppercase font-semibold flex relative mt-6 mb-2">
-                        <img class="banner-text-decoration" src="{% static 'images/Icon.svg' %}" alt="" aria-hidden="true">
-                        How to enter
-                    </p>
+                        <p class="uppercase font-semibold flex relative mt-6 mb-2">
+                            <img class="banner-text-decoration" src="{% static 'images/Icon.svg' %}" alt="" aria-hidden="true">
+                            How to enter
+                        </p>
 
-                    <ol class="list-decimal ml-6">
-                        <li>
-                            Select a style you like and edit it with your imagination
-                        </li>
+                        <ol class="list-decimal ml-6">
+                            <li>
+                                Select a style you like and edit it with your imagination
+                            </li>
 
-                        <li>
-                            Share your design on social media with <span class="text-blue-800">#SceptreDesigner</span> & <span class="text-blue-800">#InnokinSceptre</span>
-                        </li>
+                            <li>
+                                Share your design on social media with <span class="text-blue-800">#SceptreDesigner</span> & <span class="text-blue-800">#InnokinSceptre</span>
+                            </li>
 
-                        <li>
-                            Submit the link to the design post
-                        </li>
+                            <li>
+                                Submit the link to the design post
+                            </li>
 
-                        <li>
-                            There you go! Thanks for joining us~
-                        </li>
-                    </ol>
-                </div><!-- .w-3/4 -->
-            </div><!-- .banner-content -->
-        </div><!-- .col-1/2 -->
-    </div><!-- #hero -->
+                            <li>
+                                There you go! Thanks for joining us~
+                            </li>
+                        </ol>
+                    </div><!-- .w-3/4 -->
+                </div><!-- .banner-content -->
+            </div><!-- .col-1/2 -->
+        </div><!-- #hero -->
+        <div class="design-tool-section bg-gray-100">
+            <div class="content-container mx-w-none py-16">
+                <div id="design-tool" class="w-5/6 mx-auto max-w-none py-16">
+                    <div class="w-full" id="app"></div>
 
-    <div class="design-tool-section bg-gray-100">
-        <div class="content-container mx-w-none py-16">
-            <div id="design-tool" class="w-5/6 mx-auto max-w-none py-16">
-                <div class="w-full" id="app"></div>
-
-                <pixie-editor></pixie-editor>
-            </div>
-        </div><!-- .content-container -->
-    </div><!-- .bg-gray-200 -->
-
+                    <pixie-editor></pixie-editor>
+                </div>
+            </div><!-- .content-container -->
+        </div><!-- .bg-gray-200 -->
+    </div>
     <div class="content-container py-16">
         <div class="filters w-full flex mb-16">
             <div class="w-3/5 mx-auto text-center">

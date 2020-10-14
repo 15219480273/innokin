@@ -1,0 +1,47 @@
+/* banner*/
+.banner{
+    padding: 100px 130px;
+}
+.hero{
+
+    background: url('/static/images/banner-bg.png');
+}
+.banner-left{
+    width: 52%;
+}
+.banner-right{
+    z-index: 999;
+    background-color: #fff;
+    position: relative;
+    top: -50px;
+    border-radius: 2rem;
+}
+.text-5xl {
+    font-size: 3.58rem;
+    font-weight: 900;
+}
+.banner-btn{
+    position: absolute;
+    left: 0px;
+    bottom: 60px;
+}
+.banner-btn a{
+    position: relative;
+    cursor: pointer;
+}
+.panel-switch{
+    position: relative;
+}
+.panel-switch img:last-child{
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+.banner-ico-active .banner-ico{
+    opacity: 1;
+}
+.banner-ico{
+    position: absolute;
+    top: 5px;
+    width: 15px;
+    opacity: 0;
+}
