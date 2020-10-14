@@ -6,6 +6,10 @@
     Home
 {% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static '/pixie/styles.min.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="flex py-16" id="hero">
         <div class="col-1/2 relative">
@@ -65,45 +69,48 @@
         </div><!-- .col-1/2 -->
     </div><!-- #hero -->
 
-    <div class="bg-gray-200">
-        <div class="content-container prose max-w-none py-16">
-            {% get_providers as socialaccount_providers %}
+    <div class="design-tool-section bg-gray-100">
+        <div class="content-container mx-w-none py-16">
+            <div id="design-tool" class="w-5/6 mx-auto max-w-none py-16">
+                <div class="w-full" id="app"></div>
 
-            {% if socialaccount_providers %}
-                <p class="text-xl">To get started with your own design, please sign up with one of your social accounts:</p>
-
-                <div class="socialaccount_ballot">
-                    <ul class="socialaccount_providers">
-                        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                    </ul>
-                </div>
-
-                {% include "socialaccount/snippets/login_extra.html" %}
-            {% endif %}
-        </div><!-- . content-container -->
-    </div>
+                <pixie-editor></pixie-editor>
+            </div>
+        </div><!-- .content-container -->
+    </div><!-- .bg-gray-200 -->
 
     <div class="content-container py-16">
+        <div class="filters w-full flex mb-16">
+            <div class="w-3/5 mx-auto text-center">
+                    <a class="text-brand-blue3 text-3xl uppercase mr-8 font-semibold" href="#">Popular</a>
+
+                    <a class="text-3xl uppercase font-semibold" href="#">Latest</a>
+            </div>
+        </div>
+
         <div class="list-of-designs">
             {% for design in object_list %}
-                <div class="design-{{ design.id }}">
+                <div class="design-{{ design.id }} border">
                     <div class="w-full flex justify-center items-center">
                         <img class="w-full" src="{{ design.design_image.url }}" alt="Design"/>
                     </div>
 
-                    <div class="flex">
+                    <div class="flex p-4">
                         <div class="w-1/2">
-                            <p class="text-2xl text-blue-900" style="margin-top: 0; margin-bottom: 0;">
-                                <i class="fas fa-thumbs-up" aria-hidden="true"></i>
-                                {{ design.votes.count }}
-                            </p>
+                            {% for account in design.author.socialaccount_set.all %}
+                                {% if account.extra_data %}
+                                   <p class="text-brand-blue1">By {{ account.extra_data.short_name }}</p>
+                                {% endif %}
+                            {% endfor %}
                         </div><!-- .w-1/2 -->
-
                         <div class="w-1/2">
                             <form class="text-right" action="{% url 'design-vote' design.id %}" method="post">
                                 {% csrf_token %}
                                 <input type="hidden" name="{{ design.id }}" id="{{ design.id }}">
-                                <button class="rounded bg-blue-400 hover:bg-blue-600 text-blue-900 hover:text-blue-200 font-semibold py-2 px-16">Vote</button>
+                                <button class="text-brand-body hover:text-brand-blue1" type="submit" aria-label="Submit your vote">
+                                    <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+                                    {{ design.votes.count }}
+                                </button>
                             </form>
                         </div><!-- .w-1/2 -->
                     </div><!-- .flex -->
@@ -113,4 +120,13 @@
             {% endfor %}
         </div><!-- .list-of-designs -->
     </div><!-- .content-container -->
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        var dataUrl = "";
+    </script>
+    <script src="{% static '/pixie/scripts.min.js' %}"></script>
+    <script src="{% static '/js/pixie-instance.js' %}"></script>
+    <script src="{% static '/js/design-tool.js' %}"></script>
 {% endblock %}

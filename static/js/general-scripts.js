@@ -115,8 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Users\Administrator\Desktop\innokin-voting-master\src\general-scripts.js */"./src/general-scripts.js");
-module.exports = __webpack_require__(/*! D:\Users\Administrator\Desktop\innokin-voting-master\src\tailwind.css */"./src/tailwind.css");
+__webpack_require__(/*! /home/jolvera/work/innokin/proj/innokin-voting/opinionated_django/src/general-scripts.js */"./src/general-scripts.js");
+module.exports = __webpack_require__(/*! /home/jolvera/work/innokin/proj/innokin-voting/opinionated_django/src/tailwind.css */"./src/tailwind.css");
 
 
 /***/ })

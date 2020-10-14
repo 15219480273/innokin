@@ -10,27 +10,41 @@ from .utils import decode_base64
 
 
 # Create your views here.
-@login_required
+# @login_required
 def design_create(request):
     if request.method == "POST":
-        user = request.user
-        designs = Design.objects.filter(author=user)
-        print("designs", len(designs))
-        if len(designs) >= 1:
-            # https://httpstatuses.com/409
-            return JsonResponse(
-                {"message": "Only one design per user allowed."}, status=409
-            )
+        # user = request.user
+        # designs = Design.objects.filter(author=user)
+        # print("designs", len(designs))
+        # if len(designs) >= 1:
+        #     # https://httpstatuses.com/409
+        #     return JsonResponse(
+        #         {"message": "Only one design per user allowed."}, status=409
+        #     )
         form = DesignForm(request.POST)
         if form.is_valid():
             image_base64 = request.POST.get("design_image")
             design = Design(
-                author=user,
+                # author=user,
                 design_image=decode_base64(image_base64),
             )
             design.save()
-        return JsonResponse({"message": "Design created."}, status=201)
+            print('design object', design.id)
+        return JsonResponse({"message": "Design created.", "designId": design.id}, status=201)
     return Http404()
+
+
+@login_required
+def associate_design(request, pk):
+    user = request.user
+
+    try:
+        design = Design.objects.get(pk=pk)
+        design.author = user
+        design.save()
+    except Design.DoesNotExist:
+        raise Http404('Design does not exist')
+    return redirect('home')
 
 
 class DesignEditView(LoginRequiredMixin, DetailView):

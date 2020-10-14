@@ -23,6 +23,12 @@
  * Misc
  */
 
+.header-container {
+    @apply .mx-auto;
+
+    max-width: calc(100% - 120px) !important;
+}
+
 .page-heading {
     @apply .text-gray-900;
     @apply .font-semibold;
@@ -121,8 +127,8 @@
  * Design tool
  */
 
-#design-tool {
-    background-image: url('/static/images/design-tool-background.png');
+.design-tool-section {
+    background-image: url('/static/images/tool-bg.png');
     background-size: cover;
 }
 
@@ -132,6 +138,20 @@
 
 .list-of-designs {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+/**
+ * Footer
+ */
+
+.social-link img {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+}
+
+.footer-logo {
+    max-width: 150px;
 }

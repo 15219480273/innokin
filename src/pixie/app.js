@@ -22,7 +22,7 @@ const pixie = new Pixie({
         // { name: "filter", icon: "filter-custom", action: "filter" },
         // { type: "separator" },
         // { name: "resize", icon: "resize-custom", action: "resize" },
-        // { name: "crop", icon: "crop-custom", action: "crop" },
+        { name: "crop", icon: "crop-custom", action: "crop" },
         // { name: "transform", icon: "transform-custom", action: "transform" },
         // { type: "separator" },
         { name: "draw", icon: "pencil-custom", action: "draw" },
@@ -57,8 +57,9 @@ const pixie = new Pixie({
 
     // If the design was created
     if (response.status === 201) {
-      console.log(await response.data);
-      location.href = "/design/list";
+      const { designId } = await response.data
+        location.href = `/design/${designId}/finish`;
+      // location.href = "/design/list";
     } else {
       // TODO: Show a warning
     }

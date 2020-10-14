@@ -65584,8 +65584,11 @@ var pixie = new Pixie({
       items: [// { name: "filter", icon: "filter-custom", action: "filter" },
       // { type: "separator" },
       // { name: "resize", icon: "resize-custom", action: "resize" },
-      // { name: "crop", icon: "crop-custom", action: "crop" },
-      // { name: "transform", icon: "transform-custom", action: "transform" },
+      {
+        name: "crop",
+        icon: "crop-custom",
+        action: "crop"
+      }, // { name: "transform", icon: "transform-custom", action: "transform" },
       // { type: "separator" },
       {
         name: "draw",
@@ -65625,7 +65628,8 @@ var pixie = new Pixie({
   // saveUrl: "",
   onSave: function () {
     var _onSave = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(data, name) {
-      var response;
+      var response, _yield$response$data, designId;
+
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -65648,24 +65652,22 @@ var pixie = new Pixie({
               response = _context.sent;
 
               if (!(response.status === 201)) {
-                _context.next = 14;
+                _context.next = 13;
                 break;
               }
 
-              _context.t0 = console;
-              _context.next = 9;
+              _context.next = 8;
               return response.data;
 
-            case 9:
-              _context.t1 = _context.sent;
+            case 8:
+              _yield$response$data = _context.sent;
+              designId = _yield$response$data.designId;
+              location.href = "/design/".concat(designId, "/finish"); // location.href = "/design/list";
 
-              _context.t0.log.call(_context.t0, _context.t1);
-
-              location.href = "/design/list";
-              _context.next = 14;
+              _context.next = 13;
               break;
 
-            case 14:
+            case 13:
             case "end":
               return _context.stop();
           }
@@ -65876,7 +65878,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Users\Administrator\Desktop\innokin-voting-master\src\index.js */"./src/index.js");
+module.exports = __webpack_require__(/*! /home/jolvera/work/innokin/proj/innokin-voting/opinionated_django/src/index.js */"./src/index.js");
 
 
 /***/ })
