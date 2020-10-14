@@ -1,0 +1,27 @@
+{% extends '../layout.html' %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static '/pixie/styles.min.css' %}">
+{% endblock %}
+
+{% block title %}
+    Create Design
+{% endblock %}
+
+{% block content %}
+    <div id="design-tool" class="w-5/6 mx-auto max-w-none py-16">
+        <div class="w-full" id="app"></div>
+
+        <pixie-editor></pixie-editor>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        var dataUrl = "";
+    </script>
+    <script src="{% static '/pixie/scripts.min.js' %}"></script>
+    <script src="{% static '/js/pixie-instance.js' %}"></script>
+    <script src="{% static '/js/design-tool.js' %}"></script>
+{% endblock %}

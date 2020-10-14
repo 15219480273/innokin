@@ -1,0 +1,22 @@
+{% extends '../layout.html' %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static '/pixie/styles.min.css' %}">
+{% endblock %}
+
+{% block title %}
+    Edit Design
+{% endblock %}
+
+{% block content %}
+
+    <div class="w-3/4 mx-auto">
+        <pixie-editor></pixie-editor>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static '/pixie/scripts.min.js' %}"></script>
+    <script src="{% static '/js/pixie-instance.js' %}"></script>
+{% endblock %}

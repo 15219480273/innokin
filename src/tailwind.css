@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: Mulish, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+/**
+ * Layout
+ */
+
+.content-container {
+    @apply .w-2/3;
+    @apply .mx-auto;
+}
+
+/**
+ * Misc
+ */
+
+.page-heading {
+    @apply .text-gray-900;
+    @apply .font-semibold;
+    @apply .text-2xl;
+    @apply .mb-8;
+}
+
+.icon-facebook {
+    color: #3b5998;
+}
+
+.icon-instagram {
+    color: #f77737;
+}
+
+.icon-twitter {
+    color: #1da1f2;
+}
+
+.icon-reddit {
+    color: #ff4500;
+}
+
+.icon-youtube {
+    color: #ff0000;
+}
+
+/**
+ * Home
+ */
+
+/* Hero */
+
+.banner-content {
+    border-radius: 2rem;
+}
+
+.banner-text-decoration {
+    position: absolute;
+    top: 29%;
+    left: -1.5rem;
+    width: 20px;
+}
+
+/* Social login */
+
+.socialaccount_providers {
+    list-style: none;
+    margin-left: 0;
+}
+
+.socialaccount_providers li {
+    padding-left: 0 !important;
+}
+
+.socialaccount_providers li::before {
+    display: none;
+}
+
+.socialaccount_providers li a {
+    @apply .text-white;
+    @apply .py-2;
+    @apply .px-4;
+    @apply .rounded;
+
+    background-color: #3b5998;
+    text-decoration: none;
+}
+
+#signup_form label {
+    @apply block;
+}
+
+/* Social Sign Up */
+
+#signup_form input[type="email"] {
+    @apply bg-gray-200;
+    @apply appearance-none;
+    @apply border-2;
+    @apply border-gray-200;
+    @apply rounded;
+    @apply w-full;
+    @apply py-2;
+    @apply px-4;
+    @apply text-gray-700;
+
+}
+
+#signup_form input[type="email"]:focus {
+    @apply outline-none;
+    @apply bg-white;
+    @apply border-blue-500;
+}
+
+/**
+ * Design tool
+ */
+
+#design-tool {
+    background-image: url('/static/images/design-tool-background.png');
+    background-size: cover;
+}
+
+/**
+ * List of designs page
+ */
+
+.list-of-designs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+}

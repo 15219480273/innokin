@@ -1,0 +1,38 @@
+{% extends "../layout.html" %}
+
+{% load account socialaccount %}
+
+{% block content %}
+
+    <div class="content-container prose max-w-none py-16">
+        {% if 'vote' in redirect_field_value %}
+        <h2>Confirm your vote with your Social Account</h2>
+        {% else %}
+        <h2>Sign In</h2>
+        {% endif %}
+
+        {% get_providers as socialaccount_providers %}
+
+        {% if socialaccount_providers %}
+            {% if 'vote' in redirect_field_value %}
+                <p>To finalize your vote, please sign in with one
+                    of your existing social accounts:</p>
+            {% else %}
+                <p>Please sign in with one
+                    of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+                    for a SiteName account and sign in below:</p>
+            {% endif %}
+
+            <div class="socialaccount_ballot">
+
+                <ul class="socialaccount_providers">
+                    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                </ul>
+
+            </div>
+        {% else %}
+            <p>If you have not created an account yet, then please
+                <a href="{{ signup_url }}">sign up</a> first.</p>
+        {% endif %}
+    </div>
+{% endblock %}
