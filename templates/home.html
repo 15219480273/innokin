@@ -11,64 +11,95 @@
 {% endblock %}
 
 {% block content %}
-    <div class="flex py-16" id="hero">
-        <div class="col-1/2 relative">
-            <img src="{% static 'images/Banner.png' %}" alt="Innokin Spectre banner" />
-        </div><!-- .col-1/2 -->
-
-        <div class="col-1/2 flex justify-center items-center">
-            <div class="banner-content shadow-2xl p-12">
-                <div class="text-center">
-                    <img class="block mx-auto" src="{% static 'images/banner-title.png' %}" alt="" />
-                    <h2 class="text-5xl font-bold uppercase">Design Content</h2>
+    <div class="banner-section">
+        <!-- <div class="banner-text">
+            <h1>SCEPTRE</h1>
+            <h2>DESIGN CONTEST</h2>
+            <p>Enter your tagline here.Keep it short adn simple.</p>
+        </div>
+        <div class="banner-img">
+            <img src="images/banner-img.png" alt="innokin Sceptre ">
+        </div> -->
+        <img src="{% static 'images/banner.png' %}" alt="innokin Sceptre">
+        <div class="banner-btn">
+            <div>Design your exclusive Sceptre and let's make it true</div>
+            <a class="banner-btn-active">Get Started</a>
+            <a>See Designs</a>
+        </div>
+    </div>
+    <!-- <div class="section-w about-activity">
+        <p class="activity-time">
+            OCt XX to Oct XX,2020
+        </p>
+        <ul class="prize-list">
+            <li>
+                <div class="prize-img">
+                    <img src="images/prize.png" alt="prize1">
                 </div>
-
-                <div class="w-5/6 px-2 mx-auto">
-                    <p class="uppercase font-semibold flex relative mt-6 mb-2">
-                        <img class="banner-text-decoration" src="{% static 'images/Icon.svg' %}" alt="" aria-hidden="true">
-                        Duration
-                    </p>
-
-                    <p>Oct XX to Oct XX, 2020</p>
-
-                    <p class="uppercase font-semibold flex relative mt-6 mb-2">
-                        <img class="banner-text-decoration" src="{% static 'images/Icon.svg' %}" alt="" aria-hidden="true">
-                        Prizes
-                    </p>
-
-                    <p>Best Design - iPad 2020, Fully Customized Sceptre * 2</p>
-                    <p>Best Creativity - OSMO Pocket, Fully Customized Sceptre * 2</p>
-                    <p>Most Popular - XGIMI MoGo Projector, Fully Customized Sceptre * 2</p>
-                    <p>Consolation Prize * 20 - 1 Customized Sceptre printed with the designer's name</p>
-
-
-                    <p class="uppercase font-semibold flex relative mt-6 mb-2">
-                        <img class="banner-text-decoration" src="{% static 'images/Icon.svg' %}" alt="" aria-hidden="true">
-                        How to enter
-                    </p>
-
-                    <ol class="list-decimal ml-6">
-                        <li>
-                            Select a style you like and edit it with your imagination
-                        </li>
-
-                        <li>
-                            Share your design on social media with <span class="text-blue-800">#SceptreDesigner</span> & <span class="text-blue-800">#InnokinSceptre</span>
-                        </li>
-
-                        <li>
-                            Submit the link to the design post
-                        </li>
-
-                        <li>
-                            There you go! Thanks for joining us~
-                        </li>
-                    </ol>
-                </div><!-- .w-3/4 -->
-            </div><!-- .banner-content -->
-        </div><!-- .col-1/2 -->
-    </div><!-- #hero -->
-
+                <div class="prize-text">
+                    <span>Best Design</span>
+                    <p>Lorem ipsum dolor sit amet,consetetur sadipscing</p>
+                </div>
+            </li>
+            <li>
+                <div class="prize-img">
+                    <img src="images/prize.png" alt="prize1">
+                </div>
+                <div class="prize-text">
+                    <span>Best Design</span>
+                    <p>Lorem ipsum dolor sit amet,consetetur sadipscing</p>
+                </div>
+            </li>
+            <li>
+                <div class="prize-img">
+                    <img src="images/prize.png" alt="prize1">
+                </div>
+                <div class="prize-text">
+                    <span>Best Design</span>
+                    <p>Lorem ipsum dolor sit amet,consetetur sadipscing</p>
+                </div>
+            </li>
+            <li>
+                <div class="prize-img">
+                    <img src="images/prize.png" alt="prize1">
+                </div>
+                <div class="prize-text">
+                    <span>Best Design</span>
+                    <p>Lorem ipsum dolor sit amet,consetetur sadipscing</p>
+                </div>
+            </li>
+        </ul>
+    </div> -->
+    <div class="section-w section-step">
+        <h3>HOW TO ENTER</h3>
+        <ul class="step-list">
+            <li>
+                <img src="{% static 'images/step.png' %}" alt="ENTER step">
+                <div class="step-text">
+                    <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitrsed diam.</p>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'images/step.png' %}" alt="ENTER step">
+                <div class="step-text">
+                    <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitrsed diam.</p>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'images/step.png' %}" alt="ENTER step">
+                <div class="step-text">
+                    <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitrsed diam.</p>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'images/step.png' %}" alt="ENTER step">
+                <div class="step-text">
+                    <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitrsed diam.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- tool -->
     <div class="design-tool-section bg-gray-100">
         <div class="content-container mx-w-none py-16">
             <div id="design-tool" class="w-5/6 mx-auto max-w-none py-16">
@@ -78,48 +109,95 @@
             </div>
         </div><!-- .content-container -->
     </div><!-- .bg-gray-200 -->
-
-    <div class="content-container py-16">
-        <div class="filters w-full flex mb-16">
-            <div class="w-3/5 mx-auto text-center">
-                    <a class="text-brand-blue3 text-3xl uppercase mr-8 font-semibold" href="#">Popular</a>
-
-                    <a class="text-3xl uppercase font-semibold" href="#">Latest</a>
-            </div>
+    <div class="section-post">
+        <h4>
+            ALREADY POSTED IT?
+        </h4>
+        <h4>SUBMIT YOUR DESIGN HERE</h4>
+        <div class="section-post-form">
+            <form>
+                <input type="text" placeholder="Enter link to your design">
+                <button>Submit</button>
+            </form>
+            <p>By submitting design you agree to our <b>terms</b></p>
         </div>
-
-        <div class="list-of-designs">
-            {% for design in object_list %}
-                <div class="design-{{ design.id }} border">
-                    <div class="w-full flex justify-center items-center">
-                        <img class="w-full" src="{{ design.design_image.url }}" alt="Design"/>
+    </div>
+    <!-- list -->
+    <div id="view" class="section-w list-of-designs">
+        <div class="list-of-filter">
+            <h5 class="list-of-filter-active">Popular</h5>
+            <h5>Latest</h5>
+        </div>
+        <div class="designs-list" style="display: block;">
+            <div class="list-of-designs">
+                {% for design in object_list %}
+                    <div class="design-{{ design.id }} border">
+                        <div class="w-full flex justify-center items-center">
+                            <img class="w-full" src="{{ design.design_image.url }}" alt="Design"/>
+                        </div>
+    
+                        <div class="flex p-4">
+                            <div class="w-1/2">
+                                {% for account in design.author.socialaccount_set.all %}
+                                    {% if account.extra_data %}
+                                       <p class="text-brand-blue1">By {{ account.extra_data.short_name }}</p>
+                                    {% endif %}
+                                {% endfor %}
+                            </div><!-- .w-1/2 -->
+                            <div class="w-1/2">
+                                <form class="text-right" action="{% url 'design-vote' design.id %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="{{ design.id }}" id="{{ design.id }}">
+                                    <button class="text-brand-body hover:text-brand-blue1" type="submit" aria-label="Submit your vote">
+                                        <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+                                        {{ design.votes.count }}
+                                    </button>
+                                </form>
+                            </div><!-- .w-1/2 -->
+                        </div><!-- .flex -->
                     </div>
-
-                    <div class="flex p-4">
-                        <div class="w-1/2">
-                            {% for account in design.author.socialaccount_set.all %}
-                                {% if account.extra_data %}
-                                   <p class="text-brand-blue1">By {{ account.extra_data.short_name }}</p>
-                                {% endif %}
-                            {% endfor %}
-                        </div><!-- .w-1/2 -->
-                        <div class="w-1/2">
-                            <form class="text-right" action="{% url 'design-vote' design.id %}" method="post">
-                                {% csrf_token %}
-                                <input type="hidden" name="{{ design.id }}" id="{{ design.id }}">
-                                <button class="text-brand-body hover:text-brand-blue1" type="submit" aria-label="Submit your vote">
-                                    <i class="fas fa-thumbs-up" aria-hidden="true"></i>
-                                    {{ design.votes.count }}
-                                </button>
-                            </form>
-                        </div><!-- .w-1/2 -->
-                    </div><!-- .flex -->
-                </div>
-            {% empty %}
-                <p>No designs yet.</p>
-            {% endfor %}
-        </div><!-- .list-of-designs -->
-    </div><!-- .content-container -->
+                {% empty %}
+                    <p>No designs yet.</p>
+                {% endfor %}
+            </div><!-- .list-of-designs -->
+        </div>
+        <div class="designs-list">
+            <div class="list-of-designs">
+                {% for design in object_list %}
+                    <div class="design-{{ design.id }} border">
+                        <div class="w-full flex justify-center items-center">
+                            <img class="w-full" src="{{ design.design_image.url }}" alt="Design"/>
+                        </div>
+    
+                        <div class="flex p-4">
+                            <div class="w-1/2">
+                                {% for account in design.author.socialaccount_set.all %}
+                                    {% if account.extra_data %}
+                                       <p class="text-brand-blue1">By {{ account.extra_data.short_name }}</p>
+                                    {% endif %}
+                                {% endfor %}
+                            </div><!-- .w-1/2 -->
+                            <div class="w-1/2">
+                                <form class="text-right" action="{% url 'design-vote' design.id %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="{{ design.id }}" id="{{ design.id }}">
+                                    <button class="text-brand-body hover:text-brand-blue1" type="submit" aria-label="Submit your vote">
+                                        <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+                                        {{ design.votes.count }}
+                                    </button>
+                                </form>
+                            </div><!-- .w-1/2 -->
+                        </div><!-- .flex -->
+                    </div>
+                {% empty %}
+                    <p>No designs yet.</p>
+                {% endfor %}
+            </div><!-- .list-of-designs -->
+        </div>
+        <div class="more">
+            <a>Load More</a>
+        </div>
+    </div>
 {% endblock %}
 
 {% block scripts %}
