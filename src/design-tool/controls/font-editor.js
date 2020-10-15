@@ -12,12 +12,10 @@ const selectStyles = {
   control: (provided, state) => ({
     ...provided,
     borderRadius: 0,
-    border: "2px solid black",
+    // border: "1px solid gray",
+    border: 0,
     borderRight: 0,
-    "&:hover": {
-      border: "2px solid black",
-      borderRight: 0,
-    },
+    backgroundColor: "transparent",
   }),
   menu: (provided, state) => ({
     ...provided,
@@ -27,7 +25,7 @@ const selectStyles = {
   }),
   dropdownIndicator: (provided, state) => ({
     ...provided,
-    color: "black",
+    color: "#969799",
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
@@ -61,7 +59,10 @@ function FontEditor() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="flex justify-center items-stretch">
-        <div className="w-2/5">
+        <div
+          className="w-2/5 border border-brand-body"
+          style={{ borderTopLeftRadius: "0.25rem" }}
+        >
           <Select
             styles={selectStyles}
             options={fontFamilyOptions}
@@ -71,7 +72,7 @@ function FontEditor() {
             }}
           />
         </div>
-        <div className="w-2/5">
+        <div className="w-2/5 border border-brand-body border-l-0">
           <Select
             styles={selectStyles}
             options={fontSizeOptions}
@@ -81,7 +82,12 @@ function FontEditor() {
             }}
           />
         </div>
-        <div className="w-1/5 border-2 border-black justify-center items-stretch">
+        <div
+          className="w-1/5 border border-brand-body border-l-0 justify-center items-stretch"
+          style={{
+            borderTopRightRadius: "0.25rem",
+          }}
+        >
           <ColorPicker
             simple={true}
             color={fontColor}
@@ -97,9 +103,13 @@ function FontEditor() {
           <textarea
             name="content"
             id="content"
-            className="border-2 border-black border-t-0 resize-none w-full h-32 p-4 placeholder-gray-900"
+            className="border border-brand-body shadow border-t-0 resize-none w-full h-32 p-4 placeholder-gray-900"
             placeholder={"Write something"}
             value={content}
+            style={{
+              borderBottomLeftRadius: "0.25rem",
+              borderBottomRightRadius: "0.25rem",
+            }}
             onChange={(event) => changeContent(event.target.value)}
           />
         </div>

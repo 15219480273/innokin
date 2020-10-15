@@ -1,6 +1,15 @@
 import React from "react";
-import { Top } from "./top";
-import { Bottom } from "./bottom";
+import {
+  BackBottom,
+  BackFramework,
+  BackButton,
+  SideFramework,
+  SideButton,
+  SidePanel,
+  FrontBottom,
+  Top,
+  Bottom,
+} from "./spectre-angles/";
 import { useStore } from "../../store";
 
 function Canvas() {
@@ -8,13 +17,14 @@ function Canvas() {
     content,
     contentStyles,
     bgImage,
-    topColor,
+    buttonColor,
     bottomColor,
+    frameColor,
     fontColor,
   } = useStore((state) => state);
   return (
     <div id="design" className="relative">
-      <div className="bg-gray-100 text-center flex justify-center">
+      <div className="text-center flex justify-center">
         {bgImage && (
           <img
             className="absolute w-full max-h-full"
@@ -22,23 +32,87 @@ function Canvas() {
             alt="Design background"
           />
         )}
-        <div className="relative w-32 py-8">
+        <div className="relative py-8">
           <Top
-            fillColor={topColor}
+            // fillColor={buttonColor}
             style={{
               position: "absolute",
-              left: "4px",
-              top: "92px",
-              width: "100%",
+              top: "126px",
+              left: "43px",
+              width: "120px",
             }}
           />
           <Bottom
             fillColor={bottomColor}
             style={{
               position: "absolute",
-              left: "0",
-              top: "238px",
-              width: "100%",
+              top: "265px",
+              left: "44px",
+              width: "115px",
+            }}
+          />
+          <FrontBottom
+            fillColor={bottomColor}
+            style={{
+              position: "absolute",
+              top: "299px",
+              left: "206px",
+              width: "70px",
+            }}
+          />
+          <SidePanel
+            fillColor={frameColor}
+            style={{
+              position: "absolute",
+              top: "129px",
+              left: "206px",
+              width: "9px",
+            }}
+          />
+
+          <SideButton
+            fillColor={buttonColor}
+            style={{
+              position: "absolute",
+              top: "259px",
+              left: "224px",
+              width: "33px",
+            }}
+          />
+          <SideFramework
+            fillColor={frameColor}
+            style={{
+              position: "absolute",
+              top: "130px",
+              left: "207px",
+              width: "68px",
+            }}
+          />
+          <BackButton
+            fillColor={bottomColor}
+            style={{
+              position: "absolute",
+              top: "260px",
+              right: "156px",
+              width: "3px",
+            }}
+          />
+          <BackFramework
+            fillColor={frameColor}
+            style={{
+              position: "absolute",
+              right: "41px",
+              top: "124px",
+              width: "116px",
+            }}
+          />
+          <BackBottom
+            fillColor={bottomColor}
+            style={{
+              position: "absolute",
+              right: "41px",
+              bottom: "72px",
+              width: "116px",
             }}
           />
           <div
@@ -47,16 +121,20 @@ function Canvas() {
               color: fontColor,
               position: "absolute",
               transform: "translateX(-50%) rotate(90deg)",
-              left: "50%",
-              top: "368px",
+              left: "20%",
+              top: "380px",
               whiteSpace: "nowrap",
-              maxWidth: "206px",
+              maxWidth: "187px",
               overflow: "hidden",
             }}
           >
             {content}
           </div>
-          <img src="/static/images/spectre.png" alt="Spectre" />
+          <img
+            className="w-full"
+            src="/static/images/spectre-angles.jpeg"
+            alt="Spectre"
+          />
         </div>
       </div>
     </div>

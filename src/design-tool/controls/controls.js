@@ -14,9 +14,11 @@ function Controls() {
   const {
     changeBgImage,
     changeOverlayImage,
-    topColor,
-    changeTopColor,
+    buttonColor,
+    changeButtonColor,
     bottomColor,
+    frameColor,
+    changeFrameColor,
     changeBottomColor,
   } = useStore((state) => state);
 
@@ -38,22 +40,6 @@ function Controls() {
       domtoimage.toPng(designElement).then(async (dataUrl) => {
         console.log("pixie", pixie);
         pixie.openEditorWithImage(dataUrl);
-        // console.log("data", dataUrl);
-        // const response = await axios({
-        //   url: "/design/create-test",
-        //   method: "post",
-        //   headers: {
-        //     "X-CSRFToken": Cookies.get("csrftoken"),
-        //   },
-        //   data: qs.stringify({ design_image: dataUrl }),
-        // });
-        //
-        // // If the design was created
-        // if (response.status === 201) {
-        //   console.log(await response.data);
-        // } else {
-        //   // TODO: Show a warning
-        // }
       });
     } catch (error) {
       console.log("error", error);
@@ -61,28 +47,10 @@ function Controls() {
   };
 
   return (
-    <div>
-      <h1>Design</h1>
+    <div className="pl-8">
+      <div className="overlay-image mb-8">
+        <p className="text-brand-body uppercase font-bold mb-2">Panel</p>
 
-      <hr className="my-6" />
-      <h2 className="mb-8">Colors &amp; Text</h2>
-
-      <div className="flex">
-        <div className="flex flex-col justify-center">
-          <ColorPicker color={topColor} updateColor={changeTopColor} />
-          <hr className="my-3" />
-          <ColorPicker color={bottomColor} updateColor={changeBottomColor} />
-        </div>
-        <div className="w-24" />
-        <div className="w-full">
-          <FontEditor />
-        </div>
-      </div>
-
-      <hr className="my-6" />
-
-      <div className="overlay-image">
-        <h2 className="mb-8">Overlay Image</h2>
         <ImageUpload
           fileName={overlayImageFileName}
           handleImageSelect={(event) =>
@@ -94,20 +62,36 @@ function Controls() {
           }
         />
       </div>
-      <hr className="my-6" />
-      <div className="background-image">
-        <h2 className="mb-8">Background Image</h2>
-        <ImageUpload
-          fileName={backgroundImageFileName}
-          handleImageSelect={(event) =>
-            handleImageSelect(event, changeBgImage, setBackgroundImageFileName)
-          }
-        />
+
+      <div className="flex justify-between mb-8">
+        <div>
+          <p className="text-brand-body uppercase font-bold mb-2">Bottom</p>
+          <ColorPicker color={bottomColor} updateColor={changeBottomColor} />
+        </div>
+
+        <div>
+          <p className="text-brand-body uppercase font-bold mb-2">Frame</p>
+          <ColorPicker color={frameColor} updateColor={changeFrameColor} />
+        </div>
+
+        <div>
+          <p className="text-brand-body uppercase font-bold mb-2">Button</p>
+          <ColorPicker color={buttonColor} updateColor={changeButtonColor} />
+        </div>
       </div>
-      <hr className="my-6" />
+
+      <div className="flex mb-8">
+        <div className="w-full">
+          <FontEditor />
+        </div>
+      </div>
+
       <div className="design-create">
-        <Button onClick={handleCreateDesign}>
-          <FaArrowRight className="text-xl mr-3" /> Next Step
+        <Button
+          className="w-full text-xl uppercase"
+          onClick={handleCreateDesign}
+        >
+          Next Step
         </Button>
       </div>
     </div>

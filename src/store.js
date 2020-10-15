@@ -12,8 +12,9 @@ const useStore = create((set) => ({
     fontFamily: "Roboto",
     color: defaultFontColor,
   },
-  topColor: "#f17013",
-  bottomColor: "#90adc6",
+  buttonColor: "#bfbfbf",
+  bottomColor: "#0e737e",
+  frameColor: "#7cc2c0",
   fontColor: defaultFontColor,
   changeActivePanel: (panel) => set((state) => ({ activePanel: panel })),
   changeDesignUrl: (imageUrl) => set((state) => ({ designUrl: imageUrl })),
@@ -22,8 +23,9 @@ const useStore = create((set) => ({
     set((state) => ({ overlayImage: imageUrl })),
   changeContent: (content) => set((state) => ({ content })),
   changeContentStyles: (styles) => set((state) => ({ contentStyles: styles })),
-  changeTopColor: (color) => set((state) => ({ topColor: color })),
+  changeButtonColor: (color) => set((state) => ({ buttonColor: color })),
   changeBottomColor: (color) => set((state) => ({ bottomColor: color })),
+  changeFrameColor: (color) => set((state) => ({ frameColor: color })),
   changeFontColor: (color) => set((state) => ({ fontColor: color })),
 }));
 

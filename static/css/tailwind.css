@@ -19446,8 +19446,8 @@ body {
 
 .text-brand-blue3 {
   --text-opacity: 1;
-  /* color: #205ee9;
-  color: rgba(32, 94, 233, var(--text-opacity)); */
+  color: #205ee9;
+  color: rgba(32, 94, 233, var(--text-opacity));
 }
 
 .text-brand-light-blue {

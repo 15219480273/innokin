@@ -38,39 +38,18 @@ const ColorPicker = ({ color, simple = false, updateColor }) => {
         className={`flex items-center relative ${simple && "w-full h-full"}`}
         onClick={() => setDisplay(!display)}
       >
-        {!simple && (
-          <div
-            className="pointer"
-            style={{
-              position: "absolute",
-              width: "10px",
-              height: "10px",
-              background: "white",
-              borderRightWidth: "2px",
-              borderRightColor: "transparent",
-              borderBottomWidth: "2px",
-              borderBottomColor: "black",
-              borderLeftWidth: "2px",
-              borderLeftColor: "black",
-              borderTopWidth: "2px",
-              borderTopColor: "transparent",
-              transform: "rotate(45deg)",
-              left: "-3px",
-            }}
-          />
-        )}
         <div
           className={`p-1 flex items-center ${simple && "mx-auto"} ${
-            !simple && "rounded border-2 border-black"
+            !simple && "rounded shadow p-1"
           }`}
         >
           <div
-            className="w-8 h-6 z-10"
+            className="w-10 h-6 z-10"
             style={{
               backgroundColor: hex,
             }}
           />
-          <HiChevronDown className="text-2xl" />
+          <HiChevronDown className="text-brand-body font-normal text-2xl" />
         </div>
       </button>
       {display && (

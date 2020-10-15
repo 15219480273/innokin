@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button } from "../../ui-components";
-import { FaCloudUploadAlt, FaCheck } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 
 function ImageUpload({ fileName, handleImageSelect }) {
   return (
@@ -19,24 +18,19 @@ function ImageUpload({ fileName, handleImageSelect }) {
           accept="image/*"
           onChange={handleImageSelect}
         />
-        <Button
-          as="label"
-          variant="secondary"
+        <label
           htmlFor="overlay-image"
-          className="mr-2"
+          className="flex rounded cursor-pointer justify-center items-center w-full py-4 px-4 border border-brand-body shadow border-dashed"
         >
-          <FaCloudUploadAlt className="mr-2 text-xl" /> Upload an image
-        </Button>
-        <div className="flex items-center">
           {fileName ? (
             <>
               {`...${fileName.slice(-15, fileName.length)}`}{" "}
               <FaCheck className="text-green-700 ml-2 text-xl" />
             </>
           ) : (
-            "No image selected"
+            <span className="uppercase text-brand-body">Upload an image</span>
           )}
-        </div>
+        </label>
       </div>
     </form>
   );
