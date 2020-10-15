@@ -45,3 +45,123 @@
     width: 15px;
     opacity: 0;
 }
+.submit-email {
+    background-color: #ebf7fd;
+    padding: 90px 0;
+    text-align: center;
+}
+.submit-email p {
+    color: #9a9a9a;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.submit-email input {
+    border-radius: 3px;
+    width: 600px;
+    height: 45px;
+    text-indent: 10px;
+    color: #9a9a9a;
+}
+.submit-email button {
+    text-align: center;
+    color: #fff;
+    background-color: #00a0e9;
+    border-radius: 3px;
+    letter-spacing: 3px;
+    width: 220px;
+    height: 45px;
+    line-height: 45px;
+    margin-left: -5px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+}
+
+@media screen and (max-width: 768px) {
+    header nav{
+        display: none;
+    }
+    header img{
+        width: 140px;
+        max-width: unset;
+    }
+    .bg-brand-bg{
+        padding: 1rem 0;
+    }
+    .banner{
+        padding: 15px;
+    }
+    .banner-left{
+        width: auto;
+    }
+    .banner-right{
+        top: 230px;
+        /* left: -10%; */
+    }
+    .banner-content{
+        padding: 1rem;
+    }
+    .banner-content h2{
+        font-size: 1.3rem;
+    }
+    .banner-title{
+        width: 80%;
+    }
+    .hero .mt-6{
+        margin-top: 1rem;
+    }
+    .hero p{
+        font-size: 0.8rem;
+    }
+    .filters{
+        margin-bottom: 1rem;
+    }
+    .filters a{
+        font-size: 1.2rem;
+    }
+    .view{
+        padding: 1rem 0;
+    }
+    .list-of-designs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        padding: 0 1rem;
+    }
+    .designs-item div:last-child{
+        /* padding: 0.5rem; */
+    }
+    .footer-logo{
+        display: none;
+    }
+    .footer-nav >div{
+        width: 144px;
+    }
+    .footer-top p{
+        color: #fff;
+    }
+    .footer-top > .flex{
+        width: 80%;
+        display: inline-block;
+        margin-left: 10%;
+    }
+    .footer-top > .flex > .flex-col{
+        width: 100%;
+    }
+    .footer-top p,.footer-top a{
+        text-align: center;
+    }
+    .contact-info{
+        width: 100%;
+        float: left;
+        margin-top: 4rem;
+    }
+    .contact-info > p{
+        padding-left: 1rem;
+    }
+    .footer-bottom > div{
+        width: 100%;
+    }
+    .footer-bottom .text-sm{
+        width: 100%;
+        padding: 0 10%;
+    }
+}

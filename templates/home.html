@@ -34,7 +34,7 @@
             <div class="col-1/2 flex justify-center items-center banner-right">
                 <div class="banner-content shadow-2xl p-12">
                     <div class="text-center">
-                        <img class="block mx-auto" src="{% static 'images/banner-title.png' %}" alt="" />
+                        <img class="banner-title block mx-auto" src="{% static 'images/banner-title.png' %}" alt="" />
                         <h2 class="text-5xl font-bold uppercase">Design Content</h2>
                     </div>
 
@@ -83,7 +83,7 @@
                 </div><!-- .banner-content -->
             </div><!-- .col-1/2 -->
         </div><!-- #hero -->
-        <div class="design-tool-section bg-gray-100">
+        <div id="get" class="design-tool-section bg-gray-100">
             <div class="content-container mx-w-none py-16">
                 <div id="design-tool" class="w-5/6 mx-auto max-w-none py-16">
                     <div class="w-full" id="app"></div>
@@ -93,18 +93,58 @@
             </div><!-- .content-container -->
         </div><!-- .bg-gray-200 -->
     </div>
-    <div class="content-container py-16">
+    <div class="submit-email">
+        <p>Already Post it? Submit your design here</p>
+        <div>
+            <form>
+                <input type="text">
+                <button>SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <div id="view" class="view content-container py-16">
         <div class="filters w-full flex mb-16">
-            <div class="w-3/5 mx-auto text-center">
-                    <a class="text-brand-blue3 text-3xl uppercase mr-8 font-semibold" href="#">Popular</a>
-
-                    <a class="text-3xl uppercase font-semibold" href="#">Latest</a>
+            <div class="design-title w-3/5 mx-auto text-center">
+                <a class="text-brand-blue3 text-3xl uppercase mr-8 font-semibold">Popular</a>
+                <a class="text-3xl uppercase font-semibold">Latest</a>
             </div>
         </div>
 
         <div class="list-of-designs">
             {% for design in object_list %}
-                <div class="design-{{ design.id }} border">
+                <div class="design-{{ design.id }} border designs-item">
+                    <div class="w-full flex justify-center items-center">
+                        <img class="w-full" src="{{ design.design_image.url }}" alt="Design"/>
+                    </div>
+
+                    <div class="flex p-4">
+                        <div class="w-1/2">
+                            {% for account in design.author.socialaccount_set.all %}
+                                {% if account.extra_data %}
+                                   <p class="text-brand-blue1">By {{ account.extra_data.short_name }}</p>
+                                {% endif %}
+                            {% endfor %}
+                        </div><!-- .w-1/2 -->
+                        <div class="w-1/2">
+                            <form class="text-right" action="{% url 'design-vote' design.id %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="{{ design.id }}" id="{{ design.id }}">
+                                <button class="text-brand-body hover:text-brand-blue1" type="submit" aria-label="Submit your vote">
+                                    <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+                                    {{ design.votes.count }}
+                                </button>
+                            </form>
+                        </div><!-- .w-1/2 -->
+                    </div><!-- .flex -->
+                </div>
+            {% empty %}
+                <p>No designs yet.</p>
+            {% endfor %}
+        </div><!-- .list-of-designs -->
+        
+        <div class="list-of-designs" style="display:none;">
+            {% for design in object_list %}
+                <div class="design-{{ design.id }} border designs-item">
                     <div class="w-full flex justify-center items-center">
                         <img class="w-full" src="{{ design.design_image.url }}" alt="Design"/>
                     </div>
