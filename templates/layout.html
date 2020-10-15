@@ -41,6 +41,7 @@
     {% endblock %}
 </main>
 
+
 <footer>
     <div class="footer-top bg-brand-footer-top text-brand-body py-16">
         <div class="flex w-2/3 mx-auto flex">
@@ -72,9 +73,63 @@
                         </ul>
                     </div><!-- .w-1/4 -->
                 </div><!-- .footer-nav -->
+
+                <div class="footer-social-links mt-16">
+                    <a class="social-link text-3xl icon-facebook" href="https://www.facebook.com/Innokin.Technology/" aria-label="Innokin Facebook page">
+                        <img src="https://www.innokin.com/wp-content/themes/spicepress-child/images/support/fb.png" alt="">
+                    </a>
+                    <a class="social-link text-3xl icon-instagram" href="https://www.instagram.com/innokintechnology/" aria-label="Innokin Instagram page">
+                        <img src="https://www.innokin.com/wp-content/themes/spicepress-child/images/support/ig.png" alt="">
+                    </a>
+                    <a class="social-link text-3xl icon-twitter" href="https://twitter.com/Innokintech" aria-label="Innokin Twitter page">
+                        <img src="https://www.innokin.com/wp-content/themes/spicepress-child/images/support/twitter.png" alt="">
+                    </a>
+                    <a class="social-link text-3xl icon-reddit" href="https://www.reddit.com/r/innokin" aria-label="Innokin Reddit page">
+                        <img src="https://www.innokin.com/wp-content/themes/spicepress-child/images/support/reddit.png" alt="">
+                    </a>
+                    <a class="social-link text-3xl icon-youtube" href="https://www.youtube.com/channel/UCJTjnyXtlnN5LUQ7ABuMlAA" aria-label="Innokin YouTube page">
+                        <img src="https://www.innokin.com/wp-content/uploads/2019/08/youtube.png" alt="">
+                    </a>
+                </div>
+            </div><!-- .w-3/4 -->
+
+            <div class="contact-info flex flex-col w-2/5">
+                <p class="font-bold uppercase mb-4 pl-16">Contact Info</p>
+                <ul class="footer-contact-info">
+                    <li class="flex w-full">
+                        <div class="w-1/6 flex flex-col items-center justify-center">
+                            <!-- <i class="text-2xl fas fa-phone" aria-hidden="true"></i> -->
+                            <img src="https://www.innokin.com/wp-content/themes/spicepress-child/images/index/phone.png" alt="">
+                        </div>
+                        <div class="w-5/6">
+                            <a href="tel:+8675529898770">+86 755 2989 8770</a>
+                        </div>
+                    </li>
+                    <li class="flex w-full mt-4">
+                        <div class="w-1/6 flex flex-col items-center justify-center">
+                            <!-- <i class="text-2xl fas fa-envelope" aria-hidden="true"></i> -->
+                            <img src="https://www.innokin.com/wp-content/themes/spicepress-child/images/index/email.png" alt="">
+                        </div>
+                        <div class="w-5/6">
+                            <a class="block" href="mailto:sales@innokin.com">sales@innokin.com</a>
+                            <a class="block" href="mailto:marketing@innokin.com">marketing@innokin.com</a>
+                            <a class="block" href="mailto:support@innokin.com">support@innokin.com(after-sales)</a>
+                        </div>
+                    </li>
+                    <li class="flex w-full mt-4">
+                        <div class="w-1/6 flex flex-col items-center justify-center">
+                            <!-- <i class="text-2xl fas fa-map-marked-alt" aria-hidden="true"></i> -->
+                            <img src="https://www.innokin.com/wp-content/themes/spicepress-child/images/index/addr.png" alt="">
+                        </div>
+                        <div class="w-5/6">
+                            <p>Building 6, Xinxintian Industrial Park, Xinsha Road, Shajing, Bao'an District, Shenzhen, China.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </div><!-- .footer-top -->
+
     <div class="footer-bottom bg-brand-footer-bottom flex py-16 bg-black text-brand-body">
         <div class="flex w-2/3 mx-auto">
             <div>
@@ -90,8 +145,8 @@
             </div>
         </div>
     </div>
-
 </footer>
+
 
 <script src="{% static 'js/scripts.js' %}"></script>
 {% block scripts %}
