@@ -5,7 +5,7 @@ $(document).ready(function() {
         $('.design-title a').removeClass('design-title-active');
         $('.design-title a').eq(i).addClass('design-title-active');
         $('.list-of-designs').css('display','none');
-        $('.list-of-designs').eq(i).css('display','block');
+        $('.list-of-designs').eq(i).css('display','grid');
     });
     // Button under banner
     $('.banner-btn a').click(function(){

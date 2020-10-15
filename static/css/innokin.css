@@ -45,6 +45,15 @@
     width: 15px;
     opacity: 0;
 }
+/* design-list */
+.design-title{
+    text-align: center;
+    padding-top: 4rem;
+}
+.design-title-active{
+    color:#205ee9!important;
+}
+/* submit email */
 .submit-email {
     background-color: #ebf7fd;
     padding: 90px 0;
@@ -77,7 +86,13 @@
 
 @media screen and (max-width: 768px) {
     header nav{
-        display: none;
+        display: none!important;
+    }
+    .header-container{
+        max-width: 80%!important;
+    }
+    .header-container .mx-auto{
+        width: 100%;
     }
     header img{
         width: 140px;
@@ -119,6 +134,7 @@
     }
     .view{
         padding: 1rem 0;
+        width: 100%;
     }
     .list-of-designs{
         display: grid;
@@ -126,9 +142,15 @@
         grid-gap: 1rem;
         padding: 0 1rem;
     }
-    .designs-item div:last-child{
-        /* padding: 0.5rem; */
+    .designs-item >div:last-child{
+        padding: 0.5rem;
     }
+
+    .designs-item .p-4 > div:first-child{
+        display: flex;
+        align-items: center;
+    }
+    
     .footer-logo{
         display: none;
     }
@@ -146,9 +168,7 @@
     .footer-top > .flex > .flex-col{
         width: 100%;
     }
-    .footer-top p,.footer-top a{
-        text-align: center;
-    }
+
     .contact-info{
         width: 100%;
         float: left;
@@ -163,5 +183,15 @@
     .footer-bottom .text-sm{
         width: 100%;
         padding: 0 10%;
+    }
+    .submit-email{
+        padding: 2rem;
+    }
+    .submit-email input{
+        width: 100%;
+    }
+    .submit-email button{
+        width: 50%;
+        margin: 20px 0 0 0;
     }
 }
