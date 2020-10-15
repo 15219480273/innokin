@@ -50,6 +50,9 @@
     text-align: center;
     padding-top: 4rem;
 }
+.design-title a{
+    cursor: pointer;
+}
 .design-title-active{
     color:#205ee9!important;
 }
