@@ -12,8 +12,8 @@ $(document).ready(function() {
     // Button under banner
     $('.banner-btn a').click(function(){
         var i = $('.banner-btn a').index(this);
-        $(".banner-btn a").removeClass('list-of-filter-active');
-        $(".banner-btn a").eq(i).addClass('list-of-filter-active');
+        $(".banner-btn a").removeClass('banner-btn-active');
+        $(".banner-btn a").eq(i).addClass('banner-btn-active');
         if(i===0){
             $("html,body").animate({scrollTop:$("#get").offset().top},600);
         }else if(i===1){
