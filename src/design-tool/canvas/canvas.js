@@ -88,7 +88,7 @@ function Canvas() {
             fillColor={bottomColor}
             style={{
               position: "absolute",
-              top: "265px",
+              top: "269px",
               left: "43px",
               width: "115px",
             }}
