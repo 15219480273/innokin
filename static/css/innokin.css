@@ -430,17 +430,23 @@ body {
     }
     #design-tool .top-0{
         top: unset;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
     }
-    #design-tool .top-0{
-        right: unset;
+    #design-tool .top-0 > button{
+        width: 50%;
     }
     #design-tool .mt-8{
-        margin-top: 4rem;
+        margin-top: 0;
     }
     #design-tool .pl-8{
         padding-left: 0;
     }
     #design-tool .pl-4{
+        padding:0;
+    }
+    #design-tool .pr-4{
         padding:0;
     }
     #design img{
