@@ -300,7 +300,7 @@ body {
     }
     .list-of-designs{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 1rem;
         padding: 0 1rem;
     }
@@ -360,6 +360,9 @@ body {
     /* phone -home */
     .banner-btn {
         position: relative;
+        right: 0;
+        bottom: 0;
+
     }
     .banner-btn div{
         width: auto;
