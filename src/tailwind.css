@@ -127,6 +127,10 @@
  * Design tool
  */
 
+#design-tool {
+    width: 1060px;
+}
+
 .design-tool-section {
     background-image: url('/static/images/tool-bg.png');
     background-size: cover;

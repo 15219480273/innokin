@@ -9,11 +9,15 @@ import {
   FrontBottom,
   Top,
   Bottom,
+  StyleTwo1,
+  StyleTwo2,
+  StyleTwo3,
 } from "./spectre-angles/";
 import { useStore } from "../../store";
 
 function Canvas() {
   const {
+    style,
     content,
     contentStyles,
     bgImage,
@@ -21,6 +25,9 @@ function Canvas() {
     bottomColor,
     frameColor,
     fontColor,
+    panel1Color,
+    panel2Color,
+    panel3Color,
   } = useStore((state) => state);
   return (
     <div id="design" className="relative">
@@ -33,15 +40,50 @@ function Canvas() {
           />
         )}
         <div className="relative py-8">
-          <Top
-            // fillColor={buttonColor}
-            style={{
-              position: "absolute",
-              top: "126px",
-              left: "43px",
-              width: "120px",
-            }}
-          />
+          {style ? (
+            <>
+              <Top
+                // fillColor={buttonColor}
+                style={{
+                  position: "absolute",
+                  top: "126px",
+                  left: "43px",
+                  width: "120px",
+                }}
+              />
+            </>
+          ) : (
+            <>
+              <StyleTwo1
+                fillColor={panel1Color}
+                style={{
+                  position: "absolute",
+                  top: "126px",
+                  left: "43px",
+                  width: "120px",
+                }}
+              />
+              <StyleTwo2
+                fillColor={panel2Color}
+                style={{
+                  position: "absolute",
+                  top: "157px",
+                  left: "45px",
+                  width: "125px",
+                }}
+              />
+              <StyleTwo3
+                fillColor={panel3Color}
+                style={{
+                  position: "absolute",
+                  top: "208px",
+                  left: "110px",
+                  width: "121px",
+                }}
+              />
+            </>
+          )}
+
           <Bottom
             fillColor={bottomColor}
             style={{

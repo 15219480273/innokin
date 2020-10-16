@@ -3,6 +3,7 @@ import create from "zustand";
 const defaultFontColor = "#000";
 const useStore = create((set) => ({
   activePanel: "design", // "design", "editing"
+  style: true,
   content: "",
   bgImage: "",
   overlayImage: "",
@@ -15,7 +16,14 @@ const useStore = create((set) => ({
   buttonColor: "#bfbfbf",
   bottomColor: "#0e737e",
   frameColor: "#7cc2c0",
+  panel1Color: "#bfbfbf",
+  panel2Color: "#0e737e",
+  panel3Color: "#7cc2c0",
+  changePanel1Color: (color) => set((state) => ({ panel1Color: color })),
+  changePanel2Color: (color) => set((state) => ({ panel2Color: color })),
+  changePanel3Color: (color) => set((state) => ({ panel3Color: color })),
   fontColor: defaultFontColor,
+  changeStyle: () => set((state) => ({ style: !state.style })),
   changeActivePanel: (panel) => set((state) => ({ activePanel: panel })),
   changeDesignUrl: (imageUrl) => set((state) => ({ designUrl: imageUrl })),
   changeBgImage: (imageUrl) => set((state) => ({ bgImage: imageUrl })),

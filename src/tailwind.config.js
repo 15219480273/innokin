@@ -686,8 +686,8 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          bg: '#333',
-          body: '#969799',
+          bg: "#333",
+          body: "#969799",
           blue1: "#2db9dd",
           green: "#71e5d2",
           white: "#fff",
@@ -696,7 +696,7 @@ module.exports = {
           "light-blue": "#effafc",
           black: "#000",
           "footer-top": "#2c2e33",
-          "footer-bottom": "#222426"
+          "footer-bottom": "#222426",
         },
       },
     },

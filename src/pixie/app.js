@@ -57,8 +57,8 @@ const pixie = new Pixie({
 
     // If the design was created
     if (response.status === 201) {
-      const { designId } = await response.data
-        location.href = `/design/${designId}/finish`;
+      const { designId } = await response.data;
+      location.href = `/design/${designId}/finish`;
       // location.href = "/design/list";
     } else {
       // TODO: Show a warning

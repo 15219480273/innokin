@@ -3,16 +3,20 @@ import domtoimage from "dom-to-image";
 import { ColorPicker } from "./color-picker";
 import { FontEditor } from "./font-editor";
 import { useStore } from "../../store";
-import { FaArrowRight } from "react-icons/fa";
 import { Button } from "../../ui-components";
 import { pixie } from "../../pixie/app";
 import { ImageUpload } from "./image-upload";
 
 function Controls() {
   const [overlayImageFileName, setOverlayImageFileName] = useState("");
-  const [backgroundImageFileName, setBackgroundImageFileName] = useState("");
   const {
-    changeBgImage,
+    panel1Color,
+    panel2Color,
+    panel3Color,
+    changePanel1Color,
+    changePanel2Color,
+    changePanel3Color,
+    style,
     changeOverlayImage,
     buttonColor,
     changeButtonColor,
@@ -21,6 +25,10 @@ function Controls() {
     changeFrameColor,
     changeBottomColor,
   } = useStore((state) => state);
+
+  useEffect(() => {
+    console.log("style", style);
+  });
 
   const handleImageSelect = (event, updateGlobalState, updateLocalState) => {
     const { files } = event.target;
@@ -49,19 +57,53 @@ function Controls() {
   return (
     <div className="pl-8">
       <div className="overlay-image mb-8">
-        <p className="text-brand-body uppercase font-bold mb-2">Panel</p>
+        {style && (
+          <>
+            <p className="text-brand-body uppercase font-bold mb-2">Panel</p>
 
-        <ImageUpload
-          fileName={overlayImageFileName}
-          handleImageSelect={(event) =>
-            handleImageSelect(
-              event,
-              changeOverlayImage,
-              setOverlayImageFileName
-            )
-          }
-        />
+            <ImageUpload
+              fileName={overlayImageFileName}
+              handleImageSelect={(event) =>
+                handleImageSelect(
+                  event,
+                  changeOverlayImage,
+                  setOverlayImageFileName
+                )
+              }
+            />
+          </>
+        )}
       </div>
+
+      {!style && (
+        <>
+          <div className="flex justify-between mb-8">
+            <div>
+              <p className="text-brand-body uppercase font-bold mb-2">Panel1</p>
+              <ColorPicker
+                color={panel1Color}
+                updateColor={changePanel1Color}
+              />
+            </div>
+
+            <div>
+              <p className="text-brand-body uppercase font-bold mb-2">Panel2</p>
+              <ColorPicker
+                color={panel2Color}
+                updateColor={changePanel2Color}
+              />
+            </div>
+
+            <div>
+              <p className="text-brand-body uppercase font-bold mb-2">Panel3</p>
+              <ColorPicker
+                color={panel3Color}
+                updateColor={changePanel3Color}
+              />
+            </div>
+          </div>
+        </>
+      )}
 
       <div className="flex justify-between mb-8">
         <div>
