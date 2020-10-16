@@ -87,7 +87,10 @@ function Canvas() {
           <Bottom
             fillColor={bottomColor}
             style={{
-
+              position: "absolute",
+              top: "269px",
+              left: "43px",
+              width: "115px",
             }}
           />
           <FrontBottom

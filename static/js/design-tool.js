@@ -22237,8 +22237,8 @@
               fillColor: l,
               style: {
                 position: "absolute",
-                top: "265px",
-                left: "44px",
+                top: "269px",
+                left: "43px",
                 width: "115px",
               },
             }),
