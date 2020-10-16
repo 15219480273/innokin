@@ -22327,7 +22327,7 @@
             ),
             o.a.createElement("img", {
               className: "w-full",
-              src: "/static/images/spectre-angles.jpeg",
+              src: "/static/images/spectre-angles1.jpeg",
               alt: "Spectre",
             })
           )
