@@ -135,14 +135,14 @@
                         </div>
     
                         <div class="flex p-4">
-                            <div class="w-1/2">
+                            <div class="w-2/3">
                                 {% for account in design.author.socialaccount_set.all %}
                                     {% if account.extra_data %}
                                        <p class="text-brand-blue1">By {{ account.extra_data.short_name }}</p>
                                     {% endif %}
                                 {% endfor %}
                             </div><!-- .w-1/2 -->
-                            <div class="w-1/2">
+                            <div class="w-1/3">
                                 <form class="text-right" action="{% url 'design-vote' design.id %}" method="post">
                                     {% csrf_token %}
                                     <input type="hidden" name="{{ design.id }}" id="{{ design.id }}">

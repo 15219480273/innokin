@@ -356,4 +356,85 @@ body {
         width: 50%;
         margin: 20px 0 0 0;
     }
+
+    /* phone -home */
+    .banner-btn {
+        position: relative;
+    }
+    .banner-btn div{
+        width: auto;
+        left: 0;
+        margin: 1rem;
+        font-size: 1.1rem;
+    }
+    .banner-btn a{
+        width: 110px;
+        border: 10px;
+        font-size: 1rem;
+        height: 40px;
+        line-height: 40px;
+    }
+    .section-step{
+        margin: 2rem 1rem;
+    }
+    .section-step li{
+        width: 100%;
+        padding: 3% 3%;
+    }
+    .section-step .step-text{
+        width: 85%;
+    }
+    .section-step h3{
+        margin-top: 4rem;
+    }
+    .section-post{
+        margin: 2rem 0;    
+        padding: 2rem 0;
+    }
+    .section-post h4{
+        font-size: 1.7rem;
+    }
+    .section-post-form{
+        width: 90%;
+    }
+    .section-post-form input{
+        height: 40px;
+        font-size: 1rem;
+        text-indent: 1.5rem;
+    }
+    .section-post-form button{
+        height: 35px;
+        line-height: 35px;
+        width: 100px;
+        font-size: 1rem;
+        top: 3.5px;
+        right: 3.5px;
+    }
+    .list-of-filter{
+        margin: 0 1rem 1rem 1rem;
+    }
+    /* tools */
+    .content-container{
+        width: 100%;
+    }
+
+    #design-tool{
+        width: 100%;
+        padding: 0;
+    }
+    .App {
+        padding: 1rem;
+    }
+    #design-tool .top-0{
+        top: unset;
+    }
+    #design-tool .top-0{
+        right: unset;
+    }
+    #design-tool .mt-8{
+        margin-top: 4rem;
+    }
+    #design-tool .pl-8,#design-tool .pl-4{
+        padding-left: 0;
+    }
 } 
