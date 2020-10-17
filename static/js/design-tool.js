@@ -21768,6 +21768,7 @@
             {
               xmlns: "http://www.w3.org/2000/svg",
               version: "1.1",
+              class: "waiting1",
               viewBox: "0 0 249 420",
             },
             e,
