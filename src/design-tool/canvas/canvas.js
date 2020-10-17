@@ -44,12 +44,12 @@ function Canvas() {
             <>
               <Top
                 // fillColor={buttonColor}
-                style={{
-                  position: "absolute",
-                  top: "126px",
-                  left: "43px",
-                  width: "120px",
-                }}
+                // style={{
+                //   position: "absolute",
+                //   top: "126px",
+                //   left: "43px",
+                //   width: "120px",
+                // }}
               />
             </>
           ) : (

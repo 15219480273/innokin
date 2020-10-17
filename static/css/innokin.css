@@ -246,6 +246,15 @@ body {
     margin: 2rem auto;
 }
 
+/* tool-css */
+.waiting1{
+    position: absolute;
+    top: 126px;
+    left: 43px;
+    width: 120px;
+    mix-blend-mode: multiply;
+}
+
 @media screen and (max-width: 768px) {
     header nav{
         display: none!important;
