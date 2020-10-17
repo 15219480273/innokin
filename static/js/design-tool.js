@@ -22195,12 +22195,7 @@
                   o.a.Fragment,
                   null,
                   o.a.createElement(J, {
-                    style: {
-                      position: "absolute",
-                      top: "126px",
-                      left: "43px",
-                      width: "120px",
-                    },
+
                   })
                 )
               : o.a.createElement(
