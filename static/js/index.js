@@ -14,9 +14,9 @@ $(document).ready(function () {
     $(".banner-btn a").removeClass("banner-btn-active");
     $(".banner-btn a").eq(i).addClass("banner-btn-active");
     if (i === 0) {
-      $("html,body").animate({ scrollTop: $("#get").offset().top }, 600);
+      $("html,body").animate({ scrollTop: $("#design-tool").offset().top }, 600);
     } else if (i === 1) {
-      $("html,body").animate({ scrollTop: $("#view").offset().top }, 600);
+      $("html,body").animate({ scrollTop: $("#filter").offset().top }, 600);
     }
   });
 });
