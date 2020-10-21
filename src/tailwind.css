@@ -162,7 +162,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 2rem;
 }
-
+.overlay-image form{
+    margin-bottom: 2rem;
+}
 /**
  * Footer
  */
