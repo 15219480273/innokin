@@ -6,7 +6,7 @@ const SidePanel = (props) => {
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 10.83 210.82"
+        viewBox="0 0 79.17 219.64"
         {...props}
         style={{
           ...props.style,

@@ -10,3 +10,4 @@ export * from "./bottom";
 export * from "./style-two1";
 export * from "./style-two2";
 export * from "./style-two3";
+export * from "./front-frame";

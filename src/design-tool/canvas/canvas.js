@@ -12,6 +12,7 @@ import {
   StyleTwo1,
   StyleTwo2,
   StyleTwo3,
+  FrontFrame,
 } from "./spectre-angles/";
 import { useStore } from "../../store";
 
@@ -32,24 +33,31 @@ function Canvas() {
   return (
     <div id="design" className="relative">
       <div className="text-center flex justify-center">
-        {bgImage && (
-          <img
-            className="absolute w-full max-h-full"
-            src={bgImage}
-            alt="Design background"
+        <img
+          className="absolute w-full max-h-full"
+          src="/static/images/spectre-bg.png"
+          alt="Design background"
+        />
+        <div className="relative w-full py-8">
+          <FrontFrame
+            fillColor={frameColor}
+            style={{
+              position: "absolute",
+              top: "166px",
+              left: "73px",
+              width: "119px",
+            }}
           />
-        )}
-        <div className="relative py-8">
           {style ? (
             <>
               <Top
                 // fillColor={buttonColor}
-                // style={{
-                //   position: "absolute",
-                //   top: "126px",
-                //   left: "43px",
-                //   width: "120px",
-                // }}
+                style={{
+                  position: "absolute",
+                  top: "168px",
+                  left: "75px",
+                  width: "120px",
+                }}
               />
             </>
           ) : (
@@ -58,8 +66,8 @@ function Canvas() {
                 fillColor={panel1Color}
                 style={{
                   position: "absolute",
-                  top: "126px",
-                  left: "43px",
+                  top: "170px",
+                  left: "77px",
                   width: "120px",
                 }}
               />
@@ -67,38 +75,37 @@ function Canvas() {
                 fillColor={panel2Color}
                 style={{
                   position: "absolute",
-                  top: "157px",
-                  left: "45px",
-                  width: "125px",
+                  top: "206px",
+                  left: "78px",
+                  width: "117px",
                 }}
               />
               <StyleTwo3
                 fillColor={panel3Color}
                 style={{
                   position: "absolute",
-                  top: "208px",
-                  left: "110px",
+                  top: "255px",
+                  left: "146px",
                   width: "121px",
                 }}
               />
             </>
           )}
-
           <Bottom
             fillColor={bottomColor}
             style={{
               position: "absolute",
-              top: "269px",
-              left: "43px",
-              width: "115px",
+              top: "305px",
+              left: "73px",
+              width: "120px",
             }}
           />
           <FrontBottom
             fillColor={bottomColor}
             style={{
               position: "absolute",
-              top: "299px",
-              left: "206px",
+              top: "342px",
+              left: "256px",
               width: "70px",
             }}
           />
@@ -106,18 +113,17 @@ function Canvas() {
             fillColor={frameColor}
             style={{
               position: "absolute",
-              top: "129px",
-              left: "206px",
-              width: "9px",
+              top: "177px",
+              left: "256px",
+              width: "69px",
             }}
           />
-
           <SideButton
             fillColor={buttonColor}
             style={{
               position: "absolute",
-              top: "259px",
-              left: "224px",
+              top: "304px",
+              left: "275px",
               width: "33px",
             }}
           />
@@ -125,17 +131,17 @@ function Canvas() {
             fillColor={frameColor}
             style={{
               position: "absolute",
-              top: "130px",
-              left: "207px",
-              width: "68px",
+              top: "172px",
+              left: "257px",
+              width: "69px",
             }}
           />
           <BackButton
-            fillColor={bottomColor}
+            fillColor={buttonColor}
             style={{
               position: "absolute",
-              top: "260px",
-              right: "156px",
+              top: "304px",
+              right: "190px",
               width: "3px",
             }}
           />
@@ -143,17 +149,17 @@ function Canvas() {
             fillColor={frameColor}
             style={{
               position: "absolute",
-              right: "41px",
-              top: "124px",
-              width: "116px",
+              right: "70px",
+              top: "166px",
+              width: "120px",
             }}
           />
           <BackBottom
             fillColor={bottomColor}
             style={{
               position: "absolute",
-              right: "41px",
-              bottom: "72px",
+              right: "74px",
+              bottom: "32px",
               width: "116px",
             }}
           />
@@ -172,11 +178,43 @@ function Canvas() {
           >
             {content}
           </div>
-          <img
-            className="w-full"
-            src="/static/images/spectre-angles1.jpeg"
-            alt="Spectre"
-          />
+          <div className="flex w-3/4 mt-20 mx-auto justify-between items-center">
+            <img
+              className="spectre-front"
+              src={
+                style
+                  ? "/static/images/spectre-front.png"
+                  : "/static/images/spectre-style2-front.png"
+              }
+              alt="Spectre front"
+              style={{
+                maxWidth: "120px",
+              }}
+            />
+
+            <img
+              className="spectre-button"
+              src="/static/images/spectre-button.png"
+              alt="Spectre button"
+              style={{
+                maxWidth: "70px",
+              }}
+            />
+
+            <img
+              className="spectre-back"
+              src="/static/images/spectre-back.png"
+              alt="Spectre back"
+              style={{
+                maxWidth: "120px",
+              }}
+            />
+          </div>
+          {/*<img*/}
+          {/*  className="w-full"*/}
+          {/*  src="/static/images/spectre-angles.jpeg"*/}
+          {/*  alt="Spectre"*/}
+          {/*/>*/}
         </div>
       </div>
     </div>

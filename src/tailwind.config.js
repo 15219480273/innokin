@@ -693,6 +693,7 @@ module.exports = {
           white: "#fff",
           blue2: "#46a5d2",
           blue3: "#205ee9",
+          blue4: "#0587e6",
           "light-blue": "#effafc",
           black: "#000",
           "footer-top": "#2c2e33",

@@ -24,3 +24,17 @@ const StyleTwo1 = (props) => {
 };
 
 export { StyleTwo1 };
+
+<svg
+  id="costom_svg2"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 250 295"
+  style="display: block;"
+>
+  <path
+    id="costom_svg_color2"
+    fill="#00ffff"
+    d="M218,482l-29-39-35-48-13-18L80,296,11,201V380L219,484Z"
+    transform="translate(-11 -201)"
+  ></path>
+</svg>;

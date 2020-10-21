@@ -6,7 +6,7 @@ const BackFramework = (props) => {
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 129.19 219.62"
+        viewBox="0 0 134 420"
         {...props}
         style={{
           ...props.style,

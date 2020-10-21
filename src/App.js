@@ -18,10 +18,10 @@ function App() {
   return (
     <div className="App mx-auto rounded shadow-lg p-8 bg-white relative">
       <div className="app-container flex flex-col lg:flex-row">
-        <div className="w-full xl:w-1/2 pr-4">
+        <div className="w-full xl:w-3/5 pr-4">
           <Canvas />
         </div>
-        <div className="w-full xl:w-1/2">
+        <div className="w-full xl:w-2/5">
           <div className="flex absolute top-0 right-0">
             <button
               className={classnames(
